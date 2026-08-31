@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>See it fail — CPLT Online (demo)</title>
+<meta name="description" content="The failure a standard document pipeline ships silently, and what routing catches instead.">
+<meta name="robots" content="noindex,nofollow"><meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="style.css"></head><body>
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="index.html" style="text-decoration:none">CPLT<span>.</span>online <span style="font-family:'JBMono',monospace;font-size:10px;letter-spacing:.14em;color:var(--faint);text-transform:uppercase;padding-left:6px">demo</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Overview</a>
+      <a href="demo.html" class="active">See it fail</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="deployment.html">Architecture</a>
+      <a href="security.html">Security</a>
+      <a class="btn" href="https://cplt.tech">cplt.tech ↗</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="pagelead"><div class="wrap stack g16 prose">
+  <h1>The failure you would never have found</h1>
+  <p>One page from a supplier document. One architecture diagram. Watch what a
+  standard pipeline does with it — and note that nothing anywhere reports a problem.</p>
+  <p style="font-size:15px;color:var(--faint);border-left:2px solid var(--line);padding-left:14px">
+  This is not a hypothetical built to make a point. It is a real failure mode from a
+  production document pipeline, found after it had already been shipping damaged evidence
+  for months. The document below is fictional; the failure is not.</p>
+</div></section>
+
+<section style="border-top:0;padding-top:0"><div class="wrap stack g20">
+  <div class="stack g12 prose">
+    <div class="eyebrow">The page · fictional supplier response pack, page 72</div>
+  </div>
+  <div class="figure" style="color:var(--dim)"><svg viewBox="0 0 640 200" role="img" aria-label="Fictional architecture diagram: bastion, application tier, data tier, backup zone">
+  <defs><marker id="a" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+    <path d="M0,0 L7,3.5 L0,7 z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.1" opacity=".85">
+    <rect x="8" y="26" width="624" height="150" rx="4" stroke-dasharray="4 4" opacity=".45"/>
+    <rect x="40" y="70" width="112" height="46" rx="3"/>
+    <rect x="214" y="70" width="112" height="46" rx="3"/>
+    <rect x="388" y="70" width="112" height="46" rx="3"/>
+    <rect x="388" y="132" width="112" height="34" rx="3" stroke-dasharray="3 3"/>
+    <path d="M152,93 L206,93" marker-end="url(#a)"/>
+    <path d="M326,93 L380,93" marker-end="url(#a)"/>
+    <path d="M444,116 L444,128" marker-end="url(#a)"/>
+    <path d="M540,93 L508,93" marker-end="url(#a)"/>
+  </g>
+  <g fill="currentColor" font-family="monospace" font-size="10.5" opacity=".95">
+    <text x="16" y="20" opacity=".6">Figure 4.1 — Architecture Overview   ·   RESTRICTED</text>
+    <text x="60" y="97">bastion</text><text x="52" y="110" opacity=".6">MFA · TLS1.2</text>
+    <text x="238" y="97">app tier</text><text x="230" y="110" opacity=".6">IF-047</text>
+    <text x="406" y="97">data tier</text><text x="400" y="110" opacity=".6">mTLS :5432</text>
+    <text x="402" y="153">backup AZ-2</text>
+    <text x="548" y="97" opacity=".6">partner</text>
+  </g>
+</svg></div>
+  <div class="runbar">
+    <button class="btn btn-gold" id="run" type="button">Run both pipelines</button>
+    <span class="meter" id="meter">two engines, same page</span>
+  </div>
+
+  <div class="lab">
+    <div class="pane">
+      <div class="pane-h"><span class="who">Standard pipeline</span>
+        <span class="tag p-warn">text-OCR first</span></div>
+      <div class="pane-b" id="lhs">Press run.</div>
+      <div class="verdict" id="lv"><span class="meter">idle</span></div>
+    </div>
+    <div class="pane">
+      <div class="pane-h"><span class="who">Routed pipeline</span>
+        <span class="tag p-ok">page classified first</span></div>
+      <div class="pane-b" id="rhs">Press run.</div>
+      <div class="verdict" id="rv"><span class="meter">idle</span></div>
+    </div>
+  </div>
+
+  <div class="punch">
+    <strong>Look at what the left-hand validator actually measured.</strong> It counted
+    characters. The mangled diagram produced plenty of them — more than the text layer —
+    so recall looked healthy and the page passed. The glyphs in red are what a character
+    counter cannot see.
+  </div>
+
+  <div class="punch" style="border-left-color:var(--gold-line)">
+    <strong>Now the part that costs you.</strong> That page was the evidence for the
+    controls covering network segregation, encryption in transit, and privileged access.
+    An assessment built on the left-hand output reports them as satisfied, because the
+    words it needed were technically present somewhere in the noise. Nobody is lying.
+    Nobody is careless. The report is confident, complete, well formatted — and wrong in
+    a way that surfaces the day an auditor opens page 72 for themselves.
+  </div>
+
+  <div class="prose stack g16" style="padding-top:6px">
+    <p style="font-size:16.5px;color:var(--dim);line-height:1.62">
+      The fix is not a better threshold. It is refusing to let a page reach an engine that
+      cannot read it: detect the embedded raster up front, route it to a vision model, and
+      validate by looking for garble rather than by counting. Even then the right-hand pane
+      does not claim the backup encryption is missing — the diagram simply does not state it,
+      so that becomes a gap for a human rather than a finding.
+    </p>
+    <p class="note">
+      This is one failure of a class that all share a property: <strong style="color:var(--ink)">they
+      do not announce themselves.</strong> A model silently resolving to a fraction of its
+      context window. A control that was never assessed looking identical to one that passed.
+      A version number read from template debris in a footer. Nothing errors. Everything looks fine.
+    </p>
+  </div>
+</div></section>
+
+<section style="border-top:0;padding-top:0"><div class="wrap"><div class="endcta"><p>This is a demonstration of the platform. The practice that designs, builds and hands it over lives on <strong>cplt.tech</strong>.</p><div><a class="btn" href="https://cplt.tech/services">Back to cplt.tech ↗</a></div></div></div></section>
+</main>
+<footer><div class="wrap foot-in"><div><strong>Demo.</strong> cplt.online exists to show the platform working. <a href="https://cplt.tech" style="color:var(--gold-ink);text-decoration:none;border-bottom:1px solid var(--gold-line)">cplt.tech</a> is the practice.</div><div class="mono" style="font-size:12.5px">Faithful mockup — real measurements, recreated interface</div></div></footer>
+<script src="demo-data.js"></script>
+<script src="demo-app.js"></script>
+</body></html>

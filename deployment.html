@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Architecture — CPLT Online (demo)</title><meta name="description" content="Where it runs and what that decides.">
+<meta name="robots" content="noindex,nofollow"><meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="style.css"></head><body>
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="index.html" style="text-decoration:none">CPLT<span>.</span>online <span style="font-family:'JBMono',monospace;font-size:10px;letter-spacing:.14em;color:var(--faint);text-transform:uppercase;padding-left:6px">demo</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Overview</a>
+      <a href="demo.html">See it fail</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="deployment.html" class="active">Architecture</a>
+      <a href="security.html">Security</a>
+      <a class="btn" href="https://cplt.tech">cplt.tech ↗</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="pagelead"><div class="wrap stack g16 prose"><h1>Architecture</h1><p>You choose where it runs. What that choice decides about your data, and about what it costs to operate.</p></div></section><section id="deploy">
+  <div class="wrap stack g28">
+    <div class="stack g16 prose">
+      <div class="eyebrow">Architecture</div>
+      <h2 class="h2">One platform. You choose where the boundary sits.</h2>
+      <p style="font-size:17px;color:var(--dim);line-height:1.6">
+        <strong style="color:var(--ink)">You tell us where it runs. We build it. You operate
+        it.</strong> That is the model in all three cases, cloud included — one engineer designs
+        and stands up the stack, then hands it over with the runbooks. What changes between
+        these columns is who owns the machines and how isolated you are, not who ends up
+        holding the keys.
+      </p>
+    </div>
+
+    <div class="stack g16 prose">
+      <div class="eyebrow">Standard build, or a decision to make</div>
+      <h3 style="font-family:'Jakarta',sans-serif;font-size:clamp(22px,2.8vw,28px);font-weight:700;letter-spacing:-.02em">
+        Most deployments are the standard one</h3>
+      <p style="font-size:17px;color:var(--dim);line-height:1.6">
+        The platform has a default shape that works for most teams: running properly on hardware
+        they already have, or in a cloud account they already pay for. Some situations change
+        the architecture rather than the settings — and it is worth knowing which one you are
+        before anyone builds anything.
+      </p>
+    </div>
+
+    <div class="grid g2">
+      <div class="card">
+        <div class="eyebrow">What the standard build includes</div>
+        <p style="color:var(--ink);font-size:15.5px;line-height:1.6">
+          The chat platform, its databases and search, behind a reverse proxy with TLS.
+          Connected to the model providers you choose, using your own API keys. Backups
+          configured and a restore proven before handover. Runbooks and documentation written
+          to the standard a competent engineer could rebuild from.
+        </p>
+      </div>
+      <div class="card">
+        <div class="eyebrow">When the architecture is a decision</div>
+        <p style="color:var(--ink);font-size:15.5px;line-height:1.6">
+          Air-gapped environments, unusual residency obligations, retrieval across a large
+          corpus, or assessment workflows like the one on the previous page. These change what gets built, not
+          just how it is configured — so they are worth working out deliberately rather than
+          inheriting a default.
+        </p>
+      </div>
+    </div>
+
+    <p class="note prose">
+      <strong style="color:var(--ink)">The difference is whether the architecture is a decision or
+      a default.</strong> If nothing about your situation forces a choice, the default is a good
+      one and there is nothing to agonise over. If something does — and the questions below will
+      tell you — it is worth settling before anyone builds anything.
+    </p>
+
+    <div class="grid g3">
+      <div class="price">
+        <div>
+          <h3 style="font-size:19px;font-weight:700;margin-bottom:8px">Your own hardware</h3>
+          <p class="who">You buy the machines. Air-gap capable, nothing leaves your building, and the cheapest per query once the hardware is busy enough to earn its keep.</p>
+        </div>
+        <dl>
+          <div class="dl-row"><dt>Machines</dt><dd>Yours</dd></div>
+          <div class="dl-row"><dt>Built by</dt><dd>CPLT</dd></div>
+          <div class="dl-row"><dt>Run by</dt><dd>You</dd></div>
+        </dl>
+      </div>
+
+      <div class="price">
+        <div>
+          <h3 style="font-size:19px;font-weight:700;margin-bottom:8px">Private cloud</h3>
+          <p class="who">Your own cloud account, dedicated tenancy. Configured properly, your data never leaves your cloud boundary — and the GPU bill comes from your provider, not from us.</p>
+        </div>
+        <dl>
+          <div class="dl-row"><dt>Machines</dt><dd>Rented, your account</dd></div>
+          <div class="dl-row"><dt>Built by</dt><dd>CPLT</dd></div>
+          <div class="dl-row"><dt>Run by</dt><dd>You</dd></div>
+        </dl>
+      </div>
+
+      <div class="price">
+        <div>
+          <h3 style="font-size:19px;font-weight:700;margin-bottom:8px">Shared cloud</h3>
+          <p class="who">Multi-tenant, so the GPU cost is spread rather than dedicated. Quickest and cheapest to stand up, weakest isolation — and we will tell you if your obligations rule it out.</p>
+        </div>
+        <dl>
+          <div class="dl-row"><dt>Machines</dt><dd>Shared</dd></div>
+          <div class="dl-row"><dt>Built by</dt><dd>CPLT</dd></div>
+          <div class="dl-row"><dt>Run by</dt><dd>You</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    
+
+    <p class="note prose">
+      <strong style="color:var(--ink)">Your keys, your accounts — wherever it runs.</strong>
+      The platform reaches models through provider API keys, and you supply them. That is the
+      same on your own hardware as it is in the cloud. The keys live in your environment, your
+      traffic never passes through us, and your provider bills you directly at their published
+      rates — there is no markup, because there is nothing in the middle to mark up.
+    </p>
+
+    <p class="note prose">
+      <strong style="color:var(--ink)">Handover is the deliverable, not an upsell.</strong>
+      There is no managed-service tier here by design — you own and operate what you paid for.
+      Documentation and runbooks are written to a standard where a competent engineer could
+      rebuild the entire stack from them without us, which is the honest answer to the
+      continuity question your procurement team will ask, and the reason it is part of the
+      build rather than something sold to you afterwards.
+    </p>
+
+    <p class="note prose">
+      <strong style="color:var(--ink)">On premise, the hardware decides what you can run.
+      In the cloud, the GPU decides what you pay.</strong> Those are two different problems.
+      Buy a machine that is too small and some models simply will not fit on it — a decision
+      you live with for years. Rent in the cloud and nothing is too small, but the meter runs:
+      a dedicated GPU can cost more per month than the licences it replaces, so "move it to
+      the cloud" is not automatically the cheaper answer. It depends entirely on how busy the
+      thing is.
+    </p>
+    <p class="note prose">
+      Add retrieval and the arithmetic shifts again. Your corpus has to be embedded up front,
+      re-embedded whenever documents change, and a vector store has to run alongside the model.
+      That is a real line item, not a feature toggle.
+      <strong style="color:var(--ink)">None of this fits honestly on a web page.</strong> It is
+      half an hour on a call — what you need to run, how often, on whose hardware, and whether
+      retrieval is in scope — and at the end of it you get real numbers instead of a range.
+    </p>
+
+<details class="more">
+      <summary><span>What actually determines your data boundary</span><span class="sum-mark">+</span></summary>
+      <div class="more-body">
+        <p style="font-size:16px;color:var(--dim);line-height:1.62">
+          Most vendors answer this with a tidy table. We won't, because the honest answer is
+          that your boundary is not a feature we ship — it is a consequence of four
+          architectural choices, and it changes when any of them changes.
+        </p>
+        <div class="scroller"><table>
+          <thead><tr><th scope="col">The choice</th><th scope="col">What it decides</th></tr></thead>
+          <tbody>
+            <tr><td class="rowlab">Whose tenancy inference runs in</td>
+                <td>This matters more than "your cloud or ours." A managed model service inside <em>your own</em> cloud account, configured correctly, means the data never leaves your cloud boundary at all — which is a stronger guarantee than most on-premise setups achieve by accident.</td></tr>
+            <tr><td class="rowlab">Whether you use retrieval</td>
+                <td>The moment documents are embedded into a vector store, you have a second data path with its own ingress and egress. Plenty of assessments never need it. If yours does, that path gets designed deliberately rather than inherited.</td></tr>
+            <tr><td class="rowlab">Which model endpoints you enable</td>
+                <td>Open models can run entirely on hardware you control. Enabling a frontier endpoint introduces a third party, and that is a decision you make per model — not one made for you at signup.</td></tr>
+            <tr><td class="rowlab">Who holds the encryption keys</td>
+                <td>Customer-held keys are available in every arrangement except the shared tier. Where we hold them, we say so plainly rather than describing it as "enterprise-grade encryption."</td></tr>
+          </tbody>
+        </table></div>
+        <p class="note">
+          <strong style="color:var(--ink)">This is a conversation, not a checkbox.</strong>
+          Anyone who hands you a fixed residency guarantee before asking what you intend to
+          build has told you something useful about how carefully they will handle your data.
+          We map your four answers on the call, write the resulting boundary down, and that
+          document becomes part of the engagement.
+        </p>
+      </div>
+    </details>
+  </div>
+</section><section style="border-top:0;padding-top:0"><div class="wrap"><div class="nextnav"><a href="how-it-works.html">← How it works</a><a href="security.html">Security →</a></div></div></section>
+<section style="border-top:0;padding-top:0"><div class="wrap"><div class="endcta">
+  <p>This is a demonstration of the platform. The practice that designs, builds and hands it
+  over — along with what that costs — lives on <strong>cplt.tech</strong>.</p>
+  <div><a class="btn" href="https://cplt.tech/services">Back to cplt.tech ↗</a></div>
+</div></div></section>
+</main>
+<footer><div class="wrap foot-in"><div><strong>Demo.</strong> cplt.online exists to show the platform working. <a href="https://cplt.tech" style="color:var(--gold-ink);text-decoration:none;border-bottom:1px solid var(--gold-line)">cplt.tech</a> is the practice.</div><div class="mono" style="font-size:12.5px">Faithful mockup — real measurements, recreated interface</div></div></footer>
+</body></html>

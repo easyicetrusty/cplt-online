@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Security — CPLT Online (demo)</title><meta name="description" content="Agent charter and recovery objectives.">
+<meta name="robots" content="noindex,nofollow"><meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="style.css"></head><body>
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="index.html" style="text-decoration:none">CPLT<span>.</span>online <span style="font-family:'JBMono',monospace;font-size:10px;letter-spacing:.14em;color:var(--faint);text-transform:uppercase;padding-left:6px">demo</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Overview</a>
+      <a href="demo.html">See it fail</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="deployment.html">Architecture</a>
+      <a href="security.html" class="active">Security</a>
+      <a class="btn" href="https://cplt.tech">cplt.tech ↗</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="pagelead"><div class="wrap stack g16 prose"><h1>Security &amp; assurance</h1><p>The two questions a security team asks that most AI vendors answer vaguely. Ours are written down.</p></div></section><section id="trust">
+  <div class="wrap stack g28">
+    <div class="stack g16 prose">
+      <div class="eyebrow">Assurance</div>
+      <h2 class="h2">Published, not glossed over</h2>
+      <p style="color:var(--dim);font-size:16.5px">
+        Two more things your security team will ask, answered in full rather than gestured at
+        — including the parts that are less flattering.
+      </p>
+    </div>
+
+    <details class="more">
+      <summary><span>Who is in charge of the agents — the ownership charter</span><span class="sum-mark">+</span></summary>
+      <div class="more-body">
+        <p style="font-size:16px;color:var(--dim);line-height:1.6">
+          The question that should worry you about AI agents isn't whether they're clever. It's
+          what happens when two of them fix the same thing in opposite directions and nobody wrote
+          down which was allowed to. We hit that. The fix was a ratified, version-controlled
+          charter loaded by every agent that touches the system.
+        </p>
+        <div class="scroller"><table>
+          <thead><tr><th scope="col">Rule</th><th scope="col">In practice</th></tr></thead>
+          <tbody>
+            <tr><td class="rowlab">One named owner per system</td><td>Exactly one agent is accountable for each machine's state. Written down, not remembered.</td></tr>
+            <tr><td class="rowlab">Authority is not transferable</td><td>No agent assumes another's authority or hands it onward.</td></tr>
+            <tr><td class="rowlab">Ask, don't reach</td><td>Agents request changes across a boundary. They never execute across one.</td></tr>
+            <tr><td class="rowlab">Verify, don't trust</td><td>Delegated work is checked by whoever dispatched it. An agent reporting its own success is not proof.</td></tr>
+            <tr><td class="rowlab">Least authority first</td><td>New connections start read-only — a grant is easy to widen and hard to withdraw.</td></tr>
+            <tr><td class="rowlab">Helpers hold no authority</td><td>Bounded work can go to other systems, including different tooling. Dispatched, never in charge.</td></tr>
+            <tr><td class="rowlab">One human decides</td><td>Disagreements escalate to a person. No agent settles a dispute unilaterally.</td></tr>
+            <tr><td class="rowlab">Classification travels with the work</td><td>A document's classification follows it through every step, including to helper systems.</td></tr>
+          </tbody>
+        </table></div>
+        <p style="font-size:16.5px;color:var(--ink);line-height:1.6">
+          Read that list again and notice what it is: <strong>separation of duties, least
+          privilege, change control, and data classification.</strong> The controls you already
+          audit your own suppliers against — applied to the AI itself, in writing, before a
+          regulator thought to ask.
+        </p>
+      </div>
+    </details>
+
+    <details class="more">
+      <summary><span>What happens on a bad day — recovery objectives</span><span class="sum-mark">+</span></summary>
+      <div class="more-body">
+        <p style="font-size:16px;color:var(--dim)">Every vendor's demo works. Under DORA, "what happens when it breaks" has a legal form.</p>
+        <div class="scroller"><table>
+          <thead><tr><th scope="col">Scenario</th><th scope="col">Objective</th><th scope="col">How</th></tr></thead>
+          <tbody>
+            <tr><td class="rowlab">A single service fails</td><td><span class="pill p-ok">Under 1 minute</span></td><td>Restarted in place; the rest keeps serving</td></tr>
+            <tr><td class="rowlab">A database is corrupted</td><td><span class="pill p-ok">Under 30 minutes</span></td><td>Restored from the most recent local backup</td></tr>
+            <tr><td class="rowlab">The machine is lost entirely</td><td><span class="pill p-warn">Under 2 hours</span></td><td>Rebuilt from bare metal against a written playbook</td></tr>
+            <tr><td class="rowlab">Maximum data loss</td><td><span class="pill p-warn">24 hours</span></td><td>Full encrypted offsite backup, automated nightly</td></tr>
+            <tr><td class="rowlab">Maximum configuration loss</td><td><span class="pill p-ok">None</span></td><td>Rebuilt from source control</td></tr>
+          </tbody>
+        </table></div>
+        <p class="note">
+          Documented objectives, drilled quarterly against a separate machine. Note what gets
+          drilled: nearly everyone takes backups and far fewer test that a restore works —
+          <strong style="color:var(--ink)">the restore is the part we rehearse.</strong> When
+          something does break it gets a written postmortem with a root cause and a fix proven by
+          reproducing the failure.
+        </p>
+      </div>
+    </details>
+  </div>
+</section><section style="border-top:0;padding-top:0"><div class="wrap"><div class="nextnav"><a href="deployment.html">← Architecture</a><span></span></div></div></section>
+<section style="border-top:0;padding-top:0"><div class="wrap"><div class="endcta">
+  <p>This is a demonstration of the platform. The practice that designs, builds and hands it
+  over — along with what that costs — lives on <strong>cplt.tech</strong>.</p>
+  <div><a class="btn" href="https://cplt.tech/services">Back to cplt.tech ↗</a></div>
+</div></div></section>
+</main>
+<footer><div class="wrap foot-in"><div><strong>Demo.</strong> cplt.online exists to show the platform working. <a href="https://cplt.tech" style="color:var(--gold-ink);text-decoration:none;border-bottom:1px solid var(--gold-line)">cplt.tech</a> is the practice.</div><div class="mono" style="font-size:12.5px">Faithful mockup — real measurements, recreated interface</div></div></footer>
+</body></html>

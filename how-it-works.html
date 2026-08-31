@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How it works — CPLT Online (demo)</title><meta name="description" content="A real workflow and the benchmarks behind it.">
+<meta name="robots" content="noindex,nofollow"><meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="style.css"></head><body>
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="index.html" style="text-decoration:none">CPLT<span>.</span>online <span style="font-family:'JBMono',monospace;font-size:10px;letter-spacing:.14em;color:var(--faint);text-transform:uppercase;padding-left:6px">demo</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Overview</a>
+      <a href="demo.html">See it fail</a>
+      <a href="how-it-works.html" class="active">How it works</a>
+      <a href="deployment.html">Architecture</a>
+      <a href="security.html">Security</a>
+      <a class="btn" href="https://cplt.tech">cplt.tech ↗</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="pagelead"><div class="wrap stack g16 prose"><h1>How it works</h1><p>A supplier assurance workflow that has run in production for two years — and the three independent checks behind every finding.</p></div></section><section id="how">
+  <div class="wrap stack g28">
+    <div class="stack g16 prose">
+      <div class="eyebrow">Worked example · Supplier assurance</div>
+      <h2 class="h2">Your experts stop reading documents and start reviewing findings</h2>
+      <p style="font-size:17px;color:var(--dim);line-height:1.6">
+        Someone senior reads several hundred pages of a supplier's response pack, checks it
+        against dozens of controls, and writes up what's missing. It takes weeks, it happens
+        under deadline, and the quality quietly depends on how tired the reviewer was by
+        control 58. <strong style="color:var(--ink)">We automated the reading — not the
+        judgement.</strong>
+      </p>
+    </div>
+
+    <div class="steps">
+      <div class="step"><div class="step-n">01</div><div>
+        <h4>Documents go in as they arrive</h4>
+        <p>Scans, photographs, diagrams. Nobody retypes anything, and nothing is rejected for being messy.</p></div></div>
+      <div class="step"><div class="step-n">02</div><div>
+        <h4>Every control gets walked, every time</h4>
+        <p>The last one gets the same attention as the first. Coverage stops depending on stamina.</p></div></div>
+      <div class="step"><div class="step-n">03</div><div>
+        <h4>A rival model challenges the result</h4>
+        <p>Built by a different company, it reads the evidence and forms its own view <em>before</em> it is allowed to see the assessment. It can flag, never edit.</p></div></div>
+      <div class="step"><div class="step-n">04</div><div>
+        <h4>A third company's model validates the document</h4>
+        <p>A separate question, deliberately outside the subject matter: does this hold together, and would it survive an auditor?</p></div></div>
+      <div class="step"><div class="step-n">05</div><div>
+        <h4>Seventeen mechanical checks, then your expert signs off</h4>
+        <p>No opinion involved in the checks. Nothing is filed until a person approves it, and the system cannot be configured otherwise.</p></div></div>
+      <div class="step"><div class="step-n">06</div><div>
+        <h4>Every finding cites its page</h4>
+        <p>An auditor opens the source and reads the same paragraph. No finding rests on "the AI said so."</p></div></div>
+    </div>
+
+    <div class="note prose">
+      <strong style="color:var(--ink)">Nobody marks their own homework.</strong> Your auditors
+      already live by that principle; most AI tools skip it and hand you one model's opinion,
+      formatted confidently. Note the ordering too — the challenger examines the evidence
+      before it sees the answer, because shown the answer first it would tend to agree, the
+      same reason you don't hand a second doctor the first doctor's diagnosis.
+    </div>
+
+    <p class="note prose">
+      Weeks compress to days, and coverage stops drifting between reviewers.
+      <em>Representative of a workflow in production for two years; client, framework and
+      control set are confidential.</em>
+    </p>
+
+<div class="headnum">
+      <div><div class="v num">50 / 50</div><div class="k">Open model matched frontier</div></div>
+      <div><div class="v num">0</div><div class="k">False passes</div></div>
+      <div><div class="v num">~3× less</div><div class="k">Cost to run</div></div>
+      <div><div class="v num">95.8<span class="vs">vs</span>11.7</div><div class="k">Lexical vs embedding retrieval</div></div>
+    </div>
+
+<details class="more">
+      <summary><span>The blind model benchmark, and why we didn't promote the open model</span><span class="sum-mark">+</span></summary>
+      <div class="more-body">
+        <p style="font-size:16px;color:var(--dim);line-height:1.6">
+          Those figures come from a blind run against the frontier model on fifty real cases
+          taken from live work — not a public leaderboard, and not a demo set we chose.
+        </p>
+        <p style="font-size:16px;color:var(--dim);line-height:1.6">
+          <strong style="color:var(--ink)">And the honest part:</strong> we did not promote it to
+          lead assessor. An earlier run of only four cases made several candidates look flawless.
+          Expanded to fifty, one of them wrongly marked seven cases compliant — the worst error a
+          compliance tool can make, because it tells you that you passed when you did not. Four
+          cases is not evidence. The open model earned the challenger seat; the frontier model
+          kept the pen.
+        </p>
+        <p class="note">
+          Every candidate is judged on the same five questions — can it hold the whole problem at
+          once, does it reason or only follow rules, does it use tools reliably across a long job,
+          does it invent things under pressure, and what does it cost per assessment. Then one hard
+          rule: clear a full blind run and report the <strong style="color:var(--ink)">false-pass
+          count</strong>, never a headline score on a small sample. That rule exists because a
+          small sample already fooled us once.
+        </p>
+      </div>
+    </details>
+
+    <details class="more">
+      <summary><span>We tested the thing everyone sells — and it lost</span><span class="sum-mark">+</span></summary>
+      <div class="more-body">
+        <p style="font-size:16px;color:var(--dim);line-height:1.6">
+          Vector search is the industry's default answer for document retrieval. We measured it
+          on our own production corpus against plain lexical search, for the lookups compliance
+          work actually depends on — control references, standard numbers, document identifiers.
+        </p>
+        <p style="font-size:16px;color:var(--dim);line-height:1.6">
+          Embeddings lose that badly not because embeddings are bad, but because the two approaches point in opposite directions.
+          Semantic search wins conceptual questions; lexical wins identifiers. Anything sold as
+          purely one or the other is leaving results on the floor. We publish the numbers because
+          most vendors in this market don't have any.
+        </p>
+      </div>
+    </details>
+  </div>
+</section><section>
+  <div class="wrap stack g28">
+    <div class="stack g16 prose">
+      <div class="eyebrow">What you actually get</div>
+      <h2 class="h2">A chat interface your team already knows how to use</h2>
+      <p style="color:var(--dim);font-size:16.5px">
+        No training programme. The difference is what sits behind it.
+      </p>
+    </div>
+    <div class="mock">
+      <div class="mock-bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        <div class="mock-title">chat.yourcompany.eu</div></div>
+      <div class="mock-body">
+        <div class="mock-side">
+          <div class="side-lab">Model</div>
+          <div class="side-item on">Open · 27B — local</div>
+          <div class="side-item">Open · 32B vision — local</div>
+          <div class="side-item">Frontier — on approval</div>
+          <div class="side-lab" style="margin-top:14px">Corpus</div>
+          <div class="side-item on">Supplier packs</div>
+          <div class="side-item">Internal standards</div>
+        </div>
+        <div class="mock-main">
+          <div class="bubble you">Which control covers remote administrative access, and what did this supplier answer?</div>
+          <div class="bubble sys">The requirement sits under remote access management. The supplier states administrative sessions terminate through a bastion host with multi-factor authentication, but does not evidence session recording — which the control requires.<br><span class="cite">▸ response pack · page 72</span></div>
+        </div>
+      </div>
+      <div class="mock-input">Ask about your documents…</div>
+    </div>
+    <p style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+      <span class="illus">Interface mockup</span>
+      <span style="font-size:14px;color:var(--dim)">Representative of the working product. Content shown is fictional.</span>
+    </p>
+  </div>
+</section><section style="border-top:0;padding-top:0"><div class="wrap"><div class="nextnav"><a href="index.html">← Overview</a><a href="deployment.html">Architecture →</a></div></div></section>
+<section style="border-top:0;padding-top:0"><div class="wrap"><div class="endcta">
+  <p>This is a demonstration of the platform. The practice that designs, builds and hands it
+  over — along with what that costs — lives on <strong>cplt.tech</strong>.</p>
+  <div><a class="btn" href="https://cplt.tech/services">Back to cplt.tech ↗</a></div>
+</div></div></section>
+</main>
+<footer><div class="wrap foot-in"><div><strong>Demo.</strong> cplt.online exists to show the platform working. <a href="https://cplt.tech" style="color:var(--gold-ink);text-decoration:none;border-bottom:1px solid var(--gold-line)">cplt.tech</a> is the practice.</div><div class="mono" style="font-size:12.5px">Faithful mockup — real measurements, recreated interface</div></div></footer>
+</body></html>
