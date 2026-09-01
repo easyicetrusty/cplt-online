@@ -18,7 +18,7 @@
   </div>
 </header>
 <main>
-<section class="pagelead"><div class="wrap stack g16 prose"><h1>How it works</h1><p>A supplier assurance workflow that has run in production for two years — and the three independent checks behind every finding.</p></div></section><section id="how">
+<section class="pagelead"><div class="wrap stack g16 prose"><h1>How it works</h1><p>Two things the same platform does: a supplier assurance workflow that has run in production for two years, and the everyday chat your team uses the rest of the week.</p></div></section><section id="how">
   <div class="wrap stack g28">
     <div class="stack g16 prose">
       <div class="eyebrow">Worked example · Supplier assurance</div>
@@ -132,9 +132,10 @@
       <div class="mock-body">
         <div class="mock-side">
           <div class="side-lab">Model</div>
-          <div class="side-item on">Open · 27B — local</div>
-          <div class="side-item">Open · 32B vision — local</div>
+          <div class="side-item on">Automatic</div>
+          <div class="side-item">Local models only</div>
           <div class="side-item">Frontier — on approval</div>
+          <div class="side-item">Choose it myself</div>
           <div class="side-lab" style="margin-top:14px">Corpus</div>
           <div class="side-item on">Supplier packs</div>
           <div class="side-item">Internal standards</div>
@@ -149,6 +150,54 @@
     <p style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
       <span class="illus">Interface mockup</span>
       <span style="font-size:14px;color:var(--dim)">Representative of the working product. Content shown is fictional.</span>
+    </p>
+  </div>
+</section><section id="routing">
+  <div class="wrap stack g28">
+    <div class="stack g16 prose">
+      <div class="eyebrow">Choosing the model</div>
+      <h2 class="h2">Nobody on your team should have to pick a model</h2>
+      <p style="font-size:17px;color:var(--dim);line-height:1.6">
+        Most tools hand people a dropdown of model names and let them guess. The names change
+        every few months, and the guess is wrong in one of two directions — a one-line question
+        sent to the most expensive model on the list, or a genuinely hard one answered in a
+        hurry by the cheapest. <strong style="color:var(--ink)">Here the platform sizes the
+        question first and picks for them.</strong>
+      </p>
+    </div>
+
+    <div class="steps">
+      <div class="step"><div class="step-n">01</div><div>
+        <h4>It reads the question before it answers it</h4>
+        <p>A quick assessment of what the ask actually needs. It costs nothing and adds no noticeable wait.</p></div></div>
+      <div class="step"><div class="step-n">02</div><div>
+        <h4>Ordinary questions go to a small, fast model</h4>
+        <p>Reformat this, summarise that, what does this term mean. Most of the day's traffic never needs more.</p></div></div>
+      <div class="step"><div class="step-n">03</div><div>
+        <h4>Analysis moves up a tier</h4>
+        <p>Longer reasoning, comparisons across documents, anything where a fast answer would be a shallow one.</p></div></div>
+      <div class="step"><div class="step-n">04</div><div>
+        <h4>Hard problems buy thinking time before they buy a bigger invoice</h4>
+        <p>The first escalation is letting a model think for longer, not reaching for a costlier one. Price is the last lever, not the first.</p></div></div>
+      <div class="step"><div class="step-n">05</div><div>
+        <h4>A conversation keeps the model it started with</h4>
+        <p>The choice is made once, at the top of a thread, so an answer's character doesn't shift halfway through a discussion.</p></div></div>
+    </div>
+
+    <div class="note prose">
+      <strong style="color:var(--ink)">Open models and frontier models sit in the same pool.</strong>
+      Which of them a question is allowed to reach is your decision, not the router's — you enable
+      the endpoints, using your own provider keys. Work you have marked sensitive is answered by
+      models running on hardware you control, and those bytes never leave the building. Anything
+      routed outside goes to a provider you approved, sending the minimum needed, and every call
+      is logged where you can read it.
+    </div>
+
+    <p class="note prose">
+      None of this is a black box we invented and licensed to you. The routing policy is a piece
+      of configuration on your own system: you can read it, change the boundary, or pin a team to
+      local models entirely. <em>The behaviour described here runs in production on my own
+      infrastructure today.</em>
     </p>
   </div>
 </section><section style="border-top:0;padding-top:0"><div class="wrap"><div class="nextnav"><a href="index.html">← Overview</a><a href="deployment.html">Architecture →</a></div></div></section>
