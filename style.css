@@ -311,7 +311,10 @@ footer{border-top:1px solid var(--line);padding:44px 0 60px;color:var(--faint);f
 /* active nav state */
 .nav-links a.active{color:var(--gold-ink);border-bottom-color:var(--gold-line)}
 @media(max-width:820px){.nav-links a:not(.btn){display:inline-block;font-size:13px}
-  .nav-in{flex-wrap:wrap;gap:12px}.nav-links{gap:14px;margin-left:0;width:100%}}
+  .nav-in{flex-wrap:wrap;gap:12px}.nav-links{gap:10px 14px;margin-left:0;width:100%;flex-wrap:wrap}
+  /* Labels stay on one line and the row wraps instead; without this the
+     cplt.tech button ran 80px past the right edge on a 390px phone. */
+  .nav-links a{white-space:nowrap}}
 .pagelead{padding-top:54px;padding-bottom:6px}
 .pagelead h1{font-family:"Jakarta",sans-serif;font-size:clamp(30px,4.4vw,46px);font-weight:700;
   letter-spacing:-.025em;line-height:1.12;text-wrap:balance}
