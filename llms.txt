@@ -14,7 +14,7 @@ What is shown here:
   confidential): documents go in as they arrive; every control is walked every
   time; a rival model from a different company challenges the result before it
   sees the assessment; a third company's model validates the document;
-  seventeen mechanical checks run; a person signs off; every finding cites its
+  fifteen mechanical checks run; a person signs off; every finding cites its
   page.
 - Measured results from that stack: on a fifty-case blind benchmark the open
   model matched the frontier model 50/50 with zero false passes at roughly a
