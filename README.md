@@ -17,4 +17,8 @@ cplt.tech only — keep it that way to avoid the two properties drifting into ea
 Static. Deployed to Vercel from this repo; `vercel.json` sets noindex headers.
 All content is fictional demonstration material — no client, framework or corpus is represented.
 
-Deploy check 2026-09-02: single Vercel project (`site`) after removing the duplicate.
+Git pushes deploy automatically to the Vercel project `site`. Two things broke that once
+(2026-09-02) and were fixed: a duplicate project named `deploy` was attached to this repo
+and has been removed, and the project setting "Require verified commits" cancelled every
+unsigned commit and has been switched off. If deployments show as "Canceled" again, check
+that setting first.
