@@ -16,3 +16,5 @@ cplt.tech only — keep it that way to avoid the two properties drifting into ea
 ## Deploy
 Static. Deployed to Vercel from this repo; `vercel.json` sets noindex headers.
 All content is fictional demonstration material — no client, framework or corpus is represented.
+
+Deploy check 2026-09-02: single Vercel project (`site`) after removing the duplicate.
