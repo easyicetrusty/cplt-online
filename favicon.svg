@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <rect width="256" height="256" fill="#0A0A0B"/>
+  <!-- Enlarged, thicker "C" filling ~76% of canvas -->
+  <path d="M196 44 L60 44 L60 212 L196 212"
+        stroke="#F5F2EA" stroke-width="18" fill="none"
+        stroke-linecap="square" stroke-linejoin="miter"/>
+  <!-- Bigger, more integrated dot -->
+  <circle cx="196" cy="212" r="16" fill="#E5B169"/>
+</svg>

@@ -153,7 +153,7 @@ td{color:var(--dim)}
 .step:last-child{border-bottom:0}
 .step-n{font-family:"JBMono",monospace;font-size:12px;color:var(--gold-ink);padding-top:4px;
   font-variant-numeric:tabular-nums;letter-spacing:.08em}
-.step h4{font-size:17px;font-weight:600;margin-bottom:5px}
+.step h3,.step h4{font-size:17px;font-weight:600;margin-bottom:5px}
 .step p{font-size:15.5px;color:var(--dim);line-height:1.6}
 
 /* ---------- review chain ---------- */

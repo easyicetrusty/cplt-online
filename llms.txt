@@ -1,0 +1,52 @@
+# CPLT Online — the CPLT private AI platform, shown working
+
+> cplt.online is the demonstration site for CPLT (https://cplt.tech), the
+> practice of Stéphane Lepain, who designs and builds private, self-hosted AI
+> for EU teams in regulated industries and hands it over for the customer to
+> run. This site shows the platform working; it carries no pricing, no
+> engagement structure and no contact route of its own. For who CPLT is, what
+> is sold, and how to get in touch, use https://cplt.tech and
+> https://cplt.tech/llms.txt. Enquiries go to https://cplt.tech/contact.
+
+What is shown here:
+- A supplier assurance workflow, representative of one that has run in
+  production for two years (client, framework and control set are
+  confidential): documents go in as they arrive; every control is walked every
+  time; a rival model from a different company challenges the result before it
+  sees the assessment; a third company's model validates the document;
+  seventeen mechanical checks run; a person signs off; every finding cites its
+  page.
+- Measured results from that stack: on a fifty-case blind benchmark the open
+  model matched the frontier model 50/50 with zero false passes at roughly a
+  third of the running cost, and was still not promoted to lead assessor
+  because an earlier four-case run had hidden seven false passes; lexical
+  retrieval scored 95.8 against 11.7 for embedding retrieval on the
+  identifier lookups compliance work depends on.
+- Everyday chat that sizes each question and picks the model automatically,
+  with the data boundary set by the customer, not the router.
+- Architecture: the customer chooses where it runs (own hardware, private
+  cloud tenancy, or shared), CPLT builds it, the customer operates it, using
+  the customer's own provider API keys. The data boundary is a consequence of
+  four choices, not a fixed table.
+- Security: an eight-rule ownership charter for the AI agents, and recovery
+  objectives (service restart under 1 minute, database restore under 30
+  minutes, bare-metal rebuild under 2 hours, 24-hour data-loss window, zero
+  configuration loss) drilled quarterly.
+- An interactive demo of a document pipeline failing silently on a diagram
+  page, and the routed pipeline catching it. The document is fictional; the
+  failure mode is real.
+
+Pages:
+- [Overview](https://cplt.online/)
+- [See it fail](https://cplt.online/demo): the interactive failure demo
+- [How it works](https://cplt.online/how-it-works): the worked example, the
+  review chain, the benchmarks, automatic model selection
+- [Architecture](https://cplt.online/deployment): where it runs and what
+  that decides
+- [Security](https://cplt.online/security): agent charter and recovery
+  objectives
+
+Interface content shown on this site is fictional and representative. The
+measurements are real and come from CPLT's own production stack. Outputs of
+the platform are probabilistic; the independent checks and the human gate
+exist because no model is reliable on its own.

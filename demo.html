@@ -1,19 +1,38 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>See it fail — CPLT Online (demo)</title>
-<meta name="description" content="The failure a standard document pipeline ships silently, and what routing catches instead.">
-<meta name="robots" content="noindex,nofollow"><meta name="color-scheme" content="light dark">
-<link rel="stylesheet" href="style.css"></head><body>
+<title>See a Document Pipeline Fail Silently — CPLT Online</title>
+<meta name="description" content="Run two OCR pipelines on the same diagram page: the standard one passes garbage with a green check, the routed one catches it. Real failure, fictional document.">
+<link rel="canonical" href="https://cplt.online/demo">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CPLT Online">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="See a Document Pipeline Fail Silently — CPLT Online">
+<meta property="og:description" content="Run two OCR pipelines on the same diagram page: the standard one passes garbage with a green check, the routed one catches it. Real failure, fictional document.">
+<meta property="og:url" content="https://cplt.online/demo">
+<meta property="og:image" content="https://cplt.online/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Interactive demo: a standard document pipeline versus a routed one">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://cplt.tech/#organization", "name": "CPLT", "url": "https://cplt.tech", "logo": {"@type": "ImageObject", "url": "https://cplt.tech/android-chrome-512x512.png", "width": 512, "height": 512}, "sameAs": ["https://www.linkedin.com/in/lepains/", "https://cplt.online"]}, {"@type": "WebSite", "@id": "https://cplt.online/#website", "name": "CPLT Online", "alternateName": "cplt.online", "url": "https://cplt.online/", "description": "Demonstration site for the CPLT private AI platform: the platform working, a worked example, measured benchmarks, and an interactive failure demo. The practice, and the contact route, live on cplt.tech.", "inLanguage": "en", "publisher": {"@id": "https://cplt.tech/#organization"}, "isPartOf": {"@id": "https://cplt.tech/#website"}}, {"@type": "WebPage", "@id": "https://cplt.online/demo#webpage", "url": "https://cplt.online/demo", "name": "See a Document Pipeline Fail Silently — CPLT Online", "description": "Run two OCR pipelines on the same diagram page: the standard one passes garbage with a green check, the routed one catches it. Real failure, fictional document.", "inLanguage": "en", "isPartOf": {"@id": "https://cplt.online/#website"}, "about": {"@id": "https://cplt.tech/#service"}, "primaryImageOfPage": {"@type": "ImageObject", "url": "https://cplt.online/og-image.png", "width": 1200, "height": 630}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "CPLT Online", "item": "https://cplt.online/"}, {"@type": "ListItem", "position": 2, "name": "See it fail", "item": "https://cplt.online/demo"}]}]}</script>
+</head><body>
 <header class="nav">
   <div class="nav-in">
-    <a class="brand" href="index.html" style="text-decoration:none">CPLT<span>.</span>online <span style="font-family:'JBMono',monospace;font-size:10px;letter-spacing:.14em;color:var(--faint);text-transform:uppercase;padding-left:6px">demo</span></a>
+    <a class="brand" href="/" style="text-decoration:none">CPLT<span>.</span>online <span style="font-family:'JBMono',monospace;font-size:10px;letter-spacing:.14em;color:var(--faint);text-transform:uppercase;padding-left:6px">demo</span></a>
     <nav class="nav-links">
-      <a href="index.html">Overview</a>
-      <a href="demo.html" class="active">See it fail</a>
-      <a href="how-it-works.html">How it works</a>
-      <a href="deployment.html">Architecture</a>
-      <a href="security.html">Security</a>
+      <a href="/">Overview</a>
+      <a href="/demo" class="active">See it fail</a>
+      <a href="/how-it-works">How it works</a>
+      <a href="/deployment">Architecture</a>
+      <a href="/security">Security</a>
       <a class="btn" href="https://cplt.tech">cplt.tech ↗</a>
     </nav>
   </div>
@@ -112,6 +131,6 @@
 <section style="border-top:0;padding-top:0"><div class="wrap"><div class="endcta"><p>This is a demonstration of the platform. The practice that designs, builds and hands it over lives on <strong>cplt.tech</strong>. It starts with a free forty-five-minute scoping call that ends in a one-page written note on what your team can run.</p><div><a class="btn btn-gold" href="https://cplt.tech/contact">Book a scoping call ↗</a> <a class="btn" href="https://cplt.tech/services">Back to cplt.tech ↗</a></div></div></div></section>
 </main>
 <footer><div class="wrap foot-in"><div><strong>Demo.</strong> cplt.online exists to show the platform working. <a href="https://cplt.tech" style="color:var(--gold-ink);text-decoration:none;border-bottom:1px solid var(--gold-line)">cplt.tech</a> is the practice.</div><div class="mono" style="font-size:12.5px">Faithful mockup — real measurements, recreated interface</div></div></footer>
-<script src="demo-data.js"></script>
-<script src="demo-app.js"></script>
+<script src="/demo-data.js"></script>
+<script src="/demo-app.js"></script>
 </body></html>
