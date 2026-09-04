@@ -1,11 +1,12 @@
 # CPLT Online — the CPLT private AI platform, shown working
 
-> cplt.online is the demonstration site for CPLT (https://cplt.tech), the
-> practice of Stéphane Lepain, who designs and builds private, self-hosted AI
-> for EU teams in regulated industries and hands it over for the customer to
+> cplt.online is the demonstration site for CPLT (https://cplt.tech), an
+> association founded by Stéphane Lepain that helps regulated EU teams
+> understand private, self-hosted AI on their own servers — and takes on
+> paid fixed-scope builds, designed and handed over for the customer to
 > run. This site shows the platform working; it carries no pricing, no
-> engagement structure and no contact route of its own. For who CPLT is, what
-> is sold, and how to get in touch, use https://cplt.tech and
+> engagement structure and no contact route of its own. For what CPLT is,
+> what it builds, and how to get in touch, use https://cplt.tech and
 > https://cplt.tech/llms.txt. Enquiries go to https://cplt.tech/contact.
 
 What is shown here:

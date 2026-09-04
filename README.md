@@ -2,9 +2,10 @@
 
 Demonstration site for the CPLT platform. Static HTML — no build step, no backend.
 
-`cplt.tech` is the practice; this exists to show the stack working and to carry the
-technical brief. Commercial content (pricing, engagement structure, contact) lives on
-cplt.tech only — keep it that way to avoid the two properties drifting into each other.
+`cplt.tech` is the association (which also takes on paid builds); this exists to show
+the stack working and to carry the technical brief. Commercial content (pricing,
+engagement structure, contact) lives on cplt.tech only — keep it that way to avoid
+the two properties drifting into each other.
 
 ## Pages
 - `index.html`         overview, orientation
