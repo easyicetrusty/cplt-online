@@ -1,5 +1,4 @@
-/* Fictional demonstration content. Behaviour modelled on the production
-   pipeline: page-type routing, garble detection, page-anchored output. */
+/* Fictional demonstration content for page-type routing, extraction checks and page references. */
 const GARBLE = [
 "## Figure 4.1 — 引 囙 Architecture 割 Overview",
 "",

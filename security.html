@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Security — Agent Charter and Recovery Objectives | CPLT Online</title>
-<meta name="description" content="The written charter governing what the AI agents may do, and recovery objectives drilled quarterly: bare-metal rebuild under two hours, database restore under thirty minutes.">
+<meta name="description" content="Questions to settle for a private AI build: agent permissions, human approval, backups and recovery testing.">
 <link rel="canonical" href="https://cplt.online/security">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
 <meta name="color-scheme" content="light dark">
@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="CPLT Online">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="Security — Agent Charter and Recovery Objectives | CPLT Online">
-<meta property="og:description" content="The written charter governing what the AI agents may do, and recovery objectives drilled quarterly: bare-metal rebuild under two hours, database restore under thirty minutes.">
+<meta property="og:description" content="Questions to settle for a private AI build: agent permissions, human approval, backups and recovery testing.">
 <meta property="og:url" content="https://cplt.online/security">
 <meta property="og:image" content="https://cplt.online/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -22,7 +22,7 @@
 <meta property="og:image:alt" content="CPLT platform security: agent ownership charter and recovery objectives">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="/style.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://cplt.tech/#organization", "name": "CPLT", "url": "https://cplt.tech", "logo": {"@type": "ImageObject", "url": "https://cplt.tech/android-chrome-512x512.png", "width": 512, "height": 512}, "sameAs": ["https://www.linkedin.com/in/lepains/", "https://cplt.online"]}, {"@type": "WebSite", "@id": "https://cplt.online/#website", "name": "CPLT Online", "alternateName": "cplt.online", "url": "https://cplt.online/", "description": "Demonstration site for the CPLT private AI platform: the platform working, a worked example, measured benchmarks, and an interactive failure demo. CPLT itself — the association, the builds, and the contact route — lives on cplt.tech.", "inLanguage": "en", "publisher": {"@id": "https://cplt.tech/#organization"}, "isPartOf": {"@id": "https://cplt.tech/#website"}}, {"@type": "WebPage", "@id": "https://cplt.online/security#webpage", "url": "https://cplt.online/security", "name": "Security — Agent Charter and Recovery Objectives | CPLT Online", "description": "The written charter governing what the AI agents may do, and recovery objectives drilled quarterly: bare-metal rebuild under two hours, database restore under thirty minutes.", "inLanguage": "en", "isPartOf": {"@id": "https://cplt.online/#website"}, "about": {"@id": "https://cplt.tech/#service"}, "primaryImageOfPage": {"@type": "ImageObject", "url": "https://cplt.online/og-image.png", "width": 1200, "height": 630}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "CPLT Online", "item": "https://cplt.online/"}, {"@type": "ListItem", "position": 2, "name": "Security", "item": "https://cplt.online/security"}]}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://cplt.tech/#organization", "name": "CPLT", "url": "https://cplt.tech", "logo": {"@type": "ImageObject", "url": "https://cplt.tech/android-chrome-512x512.png", "width": 512, "height": 512}, "sameAs": ["https://www.linkedin.com/in/lepains/", "https://cplt.online"]}, {"@type": "WebSite", "@id": "https://cplt.online/#website", "name": "CPLT Online", "alternateName": "cplt.online", "url": "https://cplt.online/", "description": "Questions to settle for a private AI build: agent permissions, human approval, backups and recovery testing.", "inLanguage": "en", "publisher": {"@id": "https://cplt.tech/#organization"}, "isPartOf": {"@id": "https://cplt.tech/#website"}}, {"@type": "WebPage", "@id": "https://cplt.online/security#webpage", "url": "https://cplt.online/security", "name": "Security — Agent Charter and Recovery Objectives | CPLT Online", "description": "Questions to settle for a private AI build: agent permissions, human approval, backups and recovery testing.", "inLanguage": "en", "isPartOf": {"@id": "https://cplt.online/#website"}, "about": {"@id": "https://cplt.tech/#service"}, "primaryImageOfPage": {"@type": "ImageObject", "url": "https://cplt.online/og-image.png", "width": 1200, "height": 630}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "CPLT Online", "item": "https://cplt.online/"}, {"@type": "ListItem", "position": 2, "name": "Security", "item": "https://cplt.online/security"}]}]}</script>
 </head><body>
 <header class="nav">
   <div class="nav-in">
@@ -38,73 +38,24 @@
   </div>
 </header>
 <main>
-<section class="pagelead"><div class="wrap stack g16 prose"><h1>Security &amp; assurance</h1><p>The two questions a security team asks that most AI vendors answer vaguely. Ours are written down.</p></div></section><section id="trust">
-  <div class="wrap stack g28">
-    <div class="stack g16 prose">
-      <div class="eyebrow">Assurance</div>
-      <h2 class="h2">Published, not glossed over</h2>
-      <p style="color:var(--dim);font-size:16.5px">
-        Two more things your security team will ask, answered in full rather than gestured at
-        — including the parts that are less flattering.
-      </p>
-    </div>
-
-    <details class="more">
-      <summary><span>Who is in charge of the agents — the ownership charter</span><span class="sum-mark">+</span></summary>
-      <div class="more-body">
-        <p style="font-size:16px;color:var(--dim);line-height:1.6">
-          The question that should worry you about AI agents isn't whether they're clever. It's
-          what happens when two of them fix the same thing in opposite directions and nobody wrote
-          down which was allowed to. We hit that. The fix was a ratified, version-controlled
-          charter loaded by every agent that touches the system.
-        </p>
-        <div class="scroller"><table>
-          <thead><tr><th scope="col">Rule</th><th scope="col">In practice</th></tr></thead>
-          <tbody>
-            <tr><td class="rowlab">One named owner per system</td><td>Exactly one agent is accountable for each machine's state. Written down, not remembered.</td></tr>
-            <tr><td class="rowlab">Authority is not transferable</td><td>No agent assumes another's authority or hands it onward.</td></tr>
-            <tr><td class="rowlab">Ask, don't reach</td><td>Agents request changes across a boundary. They never execute across one.</td></tr>
-            <tr><td class="rowlab">Verify, don't trust</td><td>Delegated work is checked by whoever dispatched it. An agent reporting its own success is not proof.</td></tr>
-            <tr><td class="rowlab">Least authority first</td><td>New connections start read-only — a grant is easy to widen and hard to withdraw.</td></tr>
-            <tr><td class="rowlab">Helpers hold no authority</td><td>Bounded work can go to other systems, including different tooling. Dispatched, never in charge.</td></tr>
-            <tr><td class="rowlab">One human decides</td><td>Disagreements escalate to a person. No agent settles a dispute unilaterally.</td></tr>
-            <tr><td class="rowlab">Classification travels with the work</td><td>A document's classification follows it through every step, including to helper systems.</td></tr>
-          </tbody>
-        </table></div>
-        <p style="font-size:16.5px;color:var(--ink);line-height:1.6">
-          Read that list again and notice what it is: <strong>separation of duties, least
-          privilege, change control, and data classification.</strong> The controls you already
-          audit your own suppliers against — applied to the AI itself, in writing, before a
-          regulator thought to ask.
-        </p>
-      </div>
-    </details>
-
-    <details class="more">
-      <summary><span>What happens on a bad day — recovery objectives</span><span class="sum-mark">+</span></summary>
-      <div class="more-body">
-        <p style="font-size:16px;color:var(--dim)">Every vendor's demo works. Under DORA, "what happens when it breaks" has a legal form.</p>
-        <div class="scroller"><table>
-          <thead><tr><th scope="col">Scenario</th><th scope="col">Objective</th><th scope="col">How</th></tr></thead>
-          <tbody>
-            <tr><td class="rowlab">A single service fails</td><td><span class="pill p-ok">Under 1 minute</span></td><td>Restarted in place; the rest keeps serving</td></tr>
-            <tr><td class="rowlab">A database is corrupted</td><td><span class="pill p-ok">Under 30 minutes</span></td><td>Restored from the most recent local backup</td></tr>
-            <tr><td class="rowlab">The machine is lost entirely</td><td><span class="pill p-warn">Under 2 hours</span></td><td>Rebuilt from bare metal against a written playbook</td></tr>
-            <tr><td class="rowlab">Maximum data loss</td><td><span class="pill p-warn">24 hours</span></td><td>Full encrypted offsite backup, automated nightly</td></tr>
-            <tr><td class="rowlab">Maximum configuration loss</td><td><span class="pill p-ok">None</span></td><td>Rebuilt from source control</td></tr>
-          </tbody>
-        </table></div>
-        <p class="note">
-          Documented objectives, drilled quarterly against a separate machine. Note what gets
-          drilled: nearly everyone takes backups and far fewer test that a restore works —
-          <strong style="color:var(--ink)">the restore is the part we rehearse.</strong> When
-          something does break it gets a written postmortem with a root cause and a fix proven by
-          reproducing the failure.
-        </p>
-      </div>
-    </details>
-  </div>
-</section><section style="border-top:0;padding-top:0"><div class="wrap"><div class="nextnav"><a href="/deployment">← Architecture</a><span></span></div></div></section>
+<section class="pagelead"><div class="wrap stack g16 prose"><h1>Security &amp; recovery</h1><p>These are decisions to make before handing an AI system access to your data or infrastructure.</p></div></section>
+<section id="trust"><div class="wrap stack g28">
+  <div class="stack g16 prose"><div class="eyebrow">Before the build</div><h2 class="h2">Write down who can do what.</h2><p class="lede">An agent needs a clear job and limited permissions. Your team needs to know which actions it can take, which need approval, and how to stop it.</p></div>
+  <details class="more" open><summary><span>Agent permissions and human responsibility</span><span class="sum-mark">+</span></summary><div class="more-body">
+    <ul><li>Name the human responsible for each system and each approval.</li><li>Start integrations with only the permissions their task needs.</li><li>Keep data restrictions in place when work passes between tools.</li><li>Check the result of an action rather than relying on an agent reporting success.</li><li>Preserve disagreements and failed checks for a person to review.</li></ul>
+    <p>These are design principles. The implementation needs tests against the access rules agreed for your environment.</p>
+  </div></details>
+  <details class="more" open><summary><span>Backups are only useful if they restore</span><span class="sum-mark">+</span></summary><div class="more-body">
+    <p>Agree how long an outage can last and how much data can be lost. Then test the restore procedure on the hardware and backup arrangement you will actually use.</p>
+    <div class="scroller"><table><thead><tr><th scope="col">Scenario</th><th scope="col">What to verify</th></tr></thead><tbody>
+      <tr><td class="rowlab">A service fails</td><td>How it is detected, restarted and checked.</td></tr>
+      <tr><td class="rowlab">A database needs restoring</td><td>Which backup to use, how long restoration takes and whether the data is intact.</td></tr>
+      <tr><td class="rowlab">The machine is unavailable</td><td>Where the replacement runs and how configuration, data and access are restored.</td></tr>
+      <tr><td class="rowlab">The usual operator is absent</td><td>Whether another authorised person can follow the runbook.</td></tr>
+    </tbody></table></div>
+    <p class="note">Recovery targets belong in the scope of your build. No recovery time is promised by this demonstration.</p>
+  </div></details>
+</div></section><section style="border-top:0;padding-top:0"><div class="wrap"><div class="nextnav"><a href="/deployment">← Architecture</a><span></span></div></div></section>
 <section style="border-top:0;padding-top:0"><div class="wrap"><div class="endcta">
   <p>This is a demonstration of the platform. CPLT — the association behind it, and the
   builds it takes on when a team asks — lives on <strong>cplt.tech</strong>, along with what a
@@ -113,5 +64,5 @@
   <div><a class="btn btn-gold" href="https://cplt.tech/contact">Book a scoping call ↗</a> <a class="btn" href="https://cplt.tech/services">Back to cplt.tech ↗</a></div>
 </div></div></section>
 </main>
-<footer><div class="wrap foot-in"><div><strong>Demo.</strong> cplt.online exists to show the platform working. <a href="https://cplt.tech" style="color:var(--gold-ink);text-decoration:none;border-bottom:1px solid var(--gold-line)">cplt.tech</a> is the association.</div><div class="mono" style="font-size:12.5px">Faithful mockup — real measurements, recreated interface</div></div></footer>
+<footer><div class="wrap foot-in"><div><strong>Demo.</strong> cplt.online exists to show the platform working. <a href="https://cplt.tech" style="color:var(--gold-ink);text-decoration:none;border-bottom:1px solid var(--gold-line)">cplt.tech</a> is the association.</div><div class="mono" style="font-size:12.5px">Illustrative demo · fictional content</div></div></footer>
 </body></html>
