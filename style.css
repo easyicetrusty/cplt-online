@@ -361,3 +361,6 @@ footer{border-top:1px solid var(--line);padding:44px 0 60px;color:var(--faint);f
 .punch{border-left:2px solid var(--stop);padding:4px 0 4px 16px;margin-top:20px;font-size:16.5px;
   color:var(--dim);line-height:1.62}
 .punch strong{color:var(--ink)}
+
+/* Recorded Studio tests replace the illustrative chat panel. */
+.recorded-tests{display:grid;gap:32px}.recorded-test{min-width:0;border:1px solid var(--line);border-radius:16px;padding:24px;background:var(--paper)}.recorded-test h3{margin:0 0 12px}.recorded-test p{line-height:1.65;max-width:80ch}.recorded-test video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#101214;border-radius:10px;margin:18px 0}.recording-note{font-size:13px;color:var(--dim)}@media(max-width:600px){.recorded-test{padding:16px}}
