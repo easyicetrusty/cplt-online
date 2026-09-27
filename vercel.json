@@ -1,4 +1,9 @@
 {
+  "git": {
+    "deploymentEnabled": {
+      "messaging-2026-09-27": false
+    }
+  },
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [

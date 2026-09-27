@@ -22,7 +22,7 @@
 <meta property="og:image:alt" content="CPLT platform architecture: your hardware, private cloud, or shared cloud">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="/style.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://cplt.tech/#organization", "name": "CPLT", "url": "https://cplt.tech", "logo": {"@type": "ImageObject", "url": "https://cplt.tech/android-chrome-512x512.png", "width": 512, "height": 512}, "sameAs": ["https://cplt.online"], "founder": {"@id": "https://cplt.tech/#person"}}, {"@type": "WebSite", "@id": "https://cplt.online/#website", "name": "CPLT Online", "alternateName": "cplt.online", "url": "https://cplt.online/", "description": "Demonstration site for the CPLT private AI platform: fictional document examples, an illustrative interface, and an interactive failure demo. CPLT itself — the association, the builds, and the contact route — lives on cplt.tech.", "inLanguage": "en", "publisher": {"@id": "https://cplt.tech/#organization"}, "isPartOf": {"@id": "https://cplt.tech/#website"}}, {"@type": "WebPage", "@id": "https://cplt.online/deployment#webpage", "url": "https://cplt.online/deployment", "name": "Architecture — Where It Runs and What That Decides | CPLT Online", "description": "One platform, three places to run it: your hardware, private cloud, or shared. What the choice decides about data boundary and cost, and why you run what CPLT builds.", "inLanguage": "en", "isPartOf": {"@id": "https://cplt.online/#website"}, "about": {"@id": "https://cplt.tech/#service"}, "primaryImageOfPage": {"@type": "ImageObject", "url": "https://cplt.online/og-image.png", "width": 1200, "height": 630}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "CPLT Online", "item": "https://cplt.online/"}, {"@type": "ListItem", "position": 2, "name": "Architecture", "item": "https://cplt.online/deployment"}]}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://cplt.tech/#organization", "name": "CPLT", "url": "https://cplt.tech", "logo": {"@type": "ImageObject", "url": "https://cplt.tech/android-chrome-512x512.png", "width": 512, "height": 512}, "sameAs": ["https://cplt.online"], "founder": {"@id": "https://cplt.tech/#person"}}, {"@type": "WebSite", "@id": "https://cplt.online/#website", "name": "CPLT Online", "alternateName": "cplt.online", "url": "https://cplt.online/", "description": "Demonstration site for the CPLT private AI platform: fictional document examples, an illustrative interface, and an interactive failure demo. CPLT is a business. Its services and contact route are on cplt.tech.", "inLanguage": "en", "publisher": {"@id": "https://cplt.tech/#organization"}, "isPartOf": {"@id": "https://cplt.tech/#website"}}, {"@type": "WebPage", "@id": "https://cplt.online/deployment#webpage", "url": "https://cplt.online/deployment", "name": "Architecture — Where It Runs and What That Decides | CPLT Online", "description": "One platform, three places to run it: your hardware, private cloud, or shared. What the choice decides about data boundary and cost, and why you run what CPLT builds.", "inLanguage": "en", "isPartOf": {"@id": "https://cplt.online/#website"}, "about": {"@id": "https://cplt.tech/#service"}, "primaryImageOfPage": {"@type": "ImageObject", "url": "https://cplt.online/og-image.png", "width": 1200, "height": 630}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "CPLT Online", "item": "https://cplt.online/"}, {"@type": "ListItem", "position": 2, "name": "Architecture", "item": "https://cplt.online/deployment"}]}]}</script>
 </head><body>
 <header class="nav">
   <div class="nav-in">
@@ -42,61 +42,58 @@
   <div class="wrap stack g28">
     <div class="stack g16 prose">
       <div class="eyebrow">Architecture</div>
-      <h2 class="h2">One platform. You choose where the boundary sits.</h2>
+      <h2 class="h2">One workspace. You choose where it runs and which models it uses.</h2>
       <p style="font-size:17px;color:var(--dim);line-height:1.6">
-        <strong style="color:var(--ink)">You tell us where it runs. We build it. You operate
-        it.</strong> That is the model in all three cases, cloud included — one engineer designs
-        and stands up the stack, then hands it over with the runbooks. What changes between
-        these columns is who owns the machines and how isolated you are, not who ends up
-        holding the keys.
+        <strong style="color:var(--ink)">You choose where it runs. I build it and hand it
+        over to your team.</strong> I agree the configuration and operating responsibilities
+        with you before building. Hardware ownership, data routes and access need checking
+        for each setup.
       </p>
     </div>
 
     <div class="stack g16 prose">
-      <div class="eyebrow">Standard build, or a decision to make</div>
+      <div class="eyebrow">Workspace and model choices</div>
       <h3 style="font-family:'Jakarta',sans-serif;font-size:clamp(22px,2.8vw,28px);font-weight:700;letter-spacing:-.02em">
-        Most deployments are the standard one</h3>
+        Different models in the same workspace</h3>
       <p style="font-size:17px;color:var(--dim);line-height:1.6">
-        The platform has a default shape that works for most teams: running properly on hardware
-        they already have, or in a cloud account they already pay for. Some situations change
-        the architecture rather than the settings — and it is worth knowing which one you are
-        before anyone builds anything.
+        One workspace can connect to different models: OpenAI, Anthropic, or open models on
+        servers you control. It can sit in your cloud account or on your own hardware. I agree
+        with you which requests may reach each provider before building. Changing the model
+        need not mean rebuilding the workspace or how your team uses it.
       </p>
     </div>
 
     <div class="grid g2">
       <div class="card">
-        <div class="eyebrow">What the standard build includes</div>
+        <div class="eyebrow">What I scope with you</div>
         <p style="color:var(--ink);font-size:15.5px;line-height:1.6">
-          The chat platform, its databases and search, behind a reverse proxy with TLS.
-          Connected to the model providers you choose, using your own API keys. Backups
-          configured and a restore proven before handover. Runbooks and documentation written
-          to the standard a competent engineer could rebuild from.
+          I agree the workspace, document handling and model connections with you.
+          External providers use your own API keys. I scope access controls, encrypted
+          connections, backup and restore checks for the chosen environment. I document
+          the configuration and walk your operator through it before handover.
         </p>
       </div>
       <div class="card">
         <div class="eyebrow">When the architecture is a decision</div>
         <p style="color:var(--ink);font-size:15.5px;line-height:1.6">
           Air-gapped environments, unusual residency obligations, retrieval across a large
-          corpus, or assessment workflows like the one on the previous page. These change what gets built, not
-          just how it is configured — so they are worth working out deliberately rather than
-          inheriting a default.
+          corpus, or assessment workflows like the one on the previous page. These can change
+          what needs building. I assess them with you before agreeing the architecture.
         </p>
       </div>
     </div>
 
     <p class="note prose">
-      <strong style="color:var(--ink)">The difference is whether the architecture is a decision or
-      a default.</strong> If nothing about your situation forces a choice, the default is a good
-      one and there is nothing to agonise over. If something does — and the questions below will
-      tell you — it is worth settling before anyone builds anything.
+      <strong style="color:var(--ink)">The architecture follows your requirements.</strong>
+      I check the information the workspace may use, the models it needs and who will
+      operate it. I do not assume one hosting arrangement is right for every build.
     </p>
 
     <div class="grid g3">
       <div class="price">
         <div>
           <h3 style="font-size:19px;font-weight:700;margin-bottom:8px">Your own hardware</h3>
-          <p class="who">You buy the machines. Air-gap capable, nothing leaves your building, and the cheapest per query once the hardware is busy enough to earn its keep.</p>
+          <p class="who">You own the machines. Open models can run locally. Data routes, connected services, capacity and total cost still need checking.</p>
         </div>
         <dl>
           <div class="dl-row"><dt>Machines</dt><dd>Yours</dd></div>
@@ -108,7 +105,7 @@
       <div class="price">
         <div>
           <h3 style="font-size:19px;font-weight:700;margin-bottom:8px">Private cloud</h3>
-          <p class="who">Your own cloud account, dedicated tenancy. Configured properly, your data never leaves your cloud boundary — and the GPU bill comes from your provider, not from us.</p>
+          <p class="who">Your own cloud account. Tenancy, enabled services, model endpoints and provider terms determine the data routes and costs.</p>
         </div>
         <dl>
           <div class="dl-row"><dt>Machines</dt><dd>Rented, your account</dd></div>
@@ -120,7 +117,7 @@
       <div class="price">
         <div>
           <h3 style="font-size:19px;font-weight:700;margin-bottom:8px">Shared cloud</h3>
-          <p class="who">Multi-tenant, so the GPU cost is spread rather than dedicated. Quickest and cheapest to stand up, weakest isolation — and we will tell you if your obligations rule it out.</p>
+          <p class="who">Shared infrastructure may be an option. I assess the provider's access controls, data handling and costs against your requirements.</p>
         </div>
         <dl>
           <div class="dl-row"><dt>Machines</dt><dd>Shared</dd></div>
@@ -133,79 +130,66 @@
     
 
     <p class="note prose">
-      <strong style="color:var(--ink)">Your keys, your accounts — wherever it runs.</strong>
-      The platform reaches models through provider API keys, and you supply them. That is the
-      same on your own hardware as it is in the cloud. The keys live in your environment, your
-      traffic never passes through us, and your provider bills you directly at their published
-      rates — there is no markup, because there is nothing in the middle to mark up.
+      <strong style="color:var(--ink)">You supply the external provider accounts and API keys.</strong>
+      Provider usage charges are separate from the build. I document which services receive
+      requests and check the configured routes with you. Local open models are another option.
     </p>
 
     <p class="note prose">
-      <strong style="color:var(--ink)">Handover is the deliverable, not an upsell.</strong>
-      There is no managed-service tier here by design — you own and operate what you paid for.
-      Documentation and runbooks are written to a standard where a competent engineer could
-      rebuild the entire stack from them without us, which is the honest answer to the
-      continuity question your procurement team will ask, and the reason it is part of the
-      build rather than something sold to you afterwards.
+      <strong style="color:var(--ink)">Your team operates the result.</strong>
+      I document configuration and operating procedures, then test the handover with your
+      named operator. Support has its own agreed scope. I do not offer a managed-service tier.
     </p>
 
     <p class="note prose">
       <strong style="color:var(--ink)">On premise, the hardware decides what you can run.
       In the cloud, the GPU decides what you pay.</strong> Those are two different problems.
-      Buy a machine that is too small and some models simply will not fit on it — a decision
-      you live with for years. Rent in the cloud and nothing is too small, but the meter runs:
-      a dedicated GPU can cost more per month than the licences it replaces, so "move it to
-      the cloud" is not automatically the cheaper answer. It depends entirely on how busy the
-      thing is.
+      A model must fit the available memory and handle the expected workload. Cloud resources
+      also have capacity limits and usage charges. A dedicated GPU can cost more than the
+      licences it replaces. I compare the full cost for your workload rather than assume
+      cloud or local hosting is cheaper.
     </p>
     <p class="note prose">
-      Add retrieval and the arithmetic shifts again. Your corpus has to be embedded up front,
-      re-embedded whenever documents change, and a vector store has to run alongside the model.
-      That is a real line item, not a feature toggle.
-      <strong style="color:var(--ink)">None of this fits honestly on a web page.</strong> It is
-      half an hour on a call — what you need to run, how often, on whose hardware, and whether
-      retrieval is in scope — and at the end of it you get real numbers instead of a range.
+      Document retrieval can add indexing, storage and update costs. The method depends
+      on the documents and the questions your team needs to answer. I include these costs
+      in the assessment before agreeing a build.
     </p>
 
 <details class="more">
       <summary><span>What actually determines your data boundary</span><span class="sum-mark">+</span></summary>
       <div class="more-body">
         <p style="font-size:16px;color:var(--dim);line-height:1.62">
-          Most vendors answer this with a tidy table. We won't, because the honest answer is
-          that your boundary is not a feature we ship — it is a consequence of four
-          architectural choices, and it changes when any of them changes.
+          I check the actual data routes for the chosen setup. Hosting location alone
+          does not establish the boundary. These four choices need reviewing.
         </p>
         <div class="scroller"><table>
           <thead><tr><th scope="col">The choice</th><th scope="col">What it decides</th></tr></thead>
           <tbody>
             <tr><td class="rowlab">Whose tenancy inference runs in</td>
-                <td>This matters more than "your cloud or ours." A managed model service inside <em>your own</em> cloud account, configured correctly, means the data never leaves your cloud boundary at all — which is a stronger guarantee than most on-premise setups achieve by accident.</td></tr>
+                <td>The account, tenancy, service configuration and provider terms all matter. I check where requests are processed rather than infer it from the account name.</td></tr>
             <tr><td class="rowlab">Whether you use retrieval</td>
-                <td>The moment documents are embedded into a vector store, you have a second data path with its own ingress and egress. Plenty of assessments never need it. If yours does, that path gets designed deliberately rather than inherited.</td></tr>
+                <td>Indexing and storage can introduce additional data routes. I check the selected retrieval method, including any external embedding service.</td></tr>
             <tr><td class="rowlab">Which model endpoints you enable</td>
-                <td>Open models can run entirely on hardware you control. Enabling a frontier endpoint introduces a third party, and that is a decision you make per model — not one made for you at signup.</td></tr>
+                <td>Open models can run on hardware you control. An external model endpoint receives the data sent to it. I agree enabled routes with you and test them.</td></tr>
             <tr><td class="rowlab">Who holds the encryption keys</td>
-                <td>Customer-held keys are available in every arrangement except the shared tier. Where we hold them, we say so plainly rather than describing it as "enterprise-grade encryption."</td></tr>
+                <td>Key ownership and management depend on the services selected. I verify what they support and document who can access or recover the keys.</td></tr>
           </tbody>
         </table></div>
         <p class="note">
-          <strong style="color:var(--ink)">This is a conversation, not a checkbox.</strong>
-          Anyone who hands you a fixed residency guarantee before asking what you intend to
-          build has told you something useful about how carefully they will handle your data.
-          We map your four answers on the call, write the resulting boundary down, and that
-          document becomes part of the engagement.
+          <strong style="color:var(--ink)">I document the agreed boundary.</strong>
+          I record the selected services, permitted data routes and checks in the written
+          scope. A change of model or service needs a fresh check of those routes.
         </p>
       </div>
     </details>
   </div>
 </section><section style="border-top:0;padding-top:0"><div class="wrap"><div class="nextnav"><a href="/how-it-works">← How it works</a><a href="/security">Security →</a></div></div></section>
 <section style="border-top:0;padding-top:0"><div class="wrap"><div class="endcta">
-  <p>This is a demonstration of the platform. CPLT — the association behind it, and the
-  builds it takes on when a team asks — lives on <strong>cplt.tech</strong>, along with what a
-  build costs. It starts with a free forty-five-minute scoping call that ends in a one-page
-  written note on what your team can run.</p>
-  <div><a class="btn btn-gold" href="https://cplt.tech/contact">Book a scoping call ↗</a> <a class="btn" href="https://cplt.tech/services">Back to cplt.tech ↗</a></div>
+  <p>This is a demonstration, not a customer result. My services and contact route are on
+  <strong>cplt.tech</strong>. Start with a free 45-minute scoping call and a one-page written
+  note. Any paid work has a written scope and price agreed first.</p>
+  <div><a class="btn btn-gold" href="https://cplt.tech/contact">Request a free call ↗</a> <a class="btn" href="https://cplt.tech/services">Back to cplt.tech ↗</a></div>
 </div></div></section>
 </main>
-<footer><div class="wrap foot-in"><div><strong>Demo.</strong> cplt.online exists to show the platform working. <a href="https://cplt.tech" style="color:var(--gold-ink);text-decoration:none;border-bottom:1px solid var(--gold-line)">cplt.tech</a> is the association.</div><div class="mono" style="font-size:12.5px">Illustrative demo · fictional content</div></div></footer>
+<footer><div class="wrap foot-in"><div><strong>Demo.</strong> cplt.online exists to show the platform working. <a href="https://cplt.tech" style="color:var(--gold-ink);text-decoration:none;border-bottom:1px solid var(--gold-line)">cplt.tech</a> describes my services.</div><div class="mono" style="font-size:12.5px">Illustrative demo · fictional content</div></div></footer>
 </body></html>
