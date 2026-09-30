@@ -4,9 +4,8 @@ cplt.online contains illustrative, fictional document examples and a simulated
 interface. It explains model routing, document extraction, source checks and
 human review. It is not a customer case study or a published production benchmark.
 
-CPLT is the association founded by Stéphane Lepain. His experience operating
-private AI systems predates CPLT. Commercial services, scoping and contact
-information live at https://cplt.tech.
+I am Stéphane Lepain, founder of CPLT. I build AI assistants and automation
+through CPLT. Services and contact are on https://cplt.tech.
 
 Pages:
 - [Overview](https://cplt.online/): explore the demonstration
