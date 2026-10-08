@@ -359,19 +359,18 @@ footer{border-top:1px solid var(--line);padding:44px 0 60px;color:var(--faint);f
 
 /* closing CTA strip + cross-domain footer */
 /* CTA band decoration (cplt.tech redesign pattern, 2026-10-08 reskin): the
-   second-accent line-grid backing from cplt.tech's mid-page CTA band,
-   applied to this site's one recurring closing-CTA band. Background/border/
-   radius/padding only — copy, buttons and links are unchanged. */
+   second-accent soft wash from cplt.tech's mid-page CTA band, applied to
+   this site's one recurring closing-CTA band. A hard-edged line-grid (as
+   used on cplt.tech's taller proof panel) read as a literal table on this
+   short, wide flex row, so only the radial glow is kept here — background/
+   border/radius/padding only, copy/buttons/links unchanged. */
 .endcta{
   border:1px solid var(--accent2-line);border-radius:16px;
   padding:var(--sp-xl) var(--sp-lg);display:flex;gap:20px;
   align-items:center;justify-content:space-between;flex-wrap:wrap;
   position:relative;background-color:var(--raise);
   background-image:
-    radial-gradient(ellipse 80% 100% at 50% 0%, color-mix(in srgb, var(--accent2) 14%, transparent), transparent 70%),
-    linear-gradient(to right, color-mix(in srgb, var(--accent2) 18%, transparent) 1px, transparent 1px),
-    linear-gradient(to bottom, color-mix(in srgb, var(--accent2) 18%, transparent) 1px, transparent 1px);
-  background-size:auto, 56px 56px, 56px 56px;
+    radial-gradient(ellipse 80% 140% at 0% 0%, color-mix(in srgb, var(--accent2) 10%, transparent), transparent 70%);
 }
 .endcta p{font-size:16px;color:var(--dim);line-height:1.55;max-width:520px}
 .endcta strong{color:var(--ink);font-weight:600}
