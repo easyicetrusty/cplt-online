@@ -123,6 +123,10 @@ header.nav{
   font-weight:600;padding:9px 18px;
 }
 .nav-links a.btn:hover{filter:brightness(1.08);border-color:var(--gold);transform:translateY(-1px)}
+@media(prefers-reduced-motion:reduce){
+  .btn{transition:border-color .15s,background .15s,box-shadow .15s}
+  .btn:hover,.nav-links a.btn:hover{transform:none}
+}
 
 /* ---------- hero ---------- */
 .hero{padding:72px 0 54px}
