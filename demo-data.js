@@ -1,6 +1,6 @@
 /* Fictional demonstration content for page-type routing, extraction checks and page references. */
 const GARBLE = [
-"## Figure 4.1 — 引 囙 Architecture 割 Overview",
+"## Figure 4.1: 引 囙 Architecture 割 Overview",
 "",
 "Syst<math>\\subset</math>m Bound<sub>a</sub>ry  囙  DMZ  引",
 "App 割 Tier  →  <math>\\rightarrow</math>  D<sup>a</sup>ta Tier 囙",
@@ -12,7 +12,7 @@ const GARBLE = [
 "引 Interface  ID  囙  IF-0<sub>4</sub>7  割  引 囙 割 引"
 ];
 const CLEAN = [
-"### Figure 4.1 — Architecture Overview  [VISION-EXTRACTED DIAGRAM]",
+"### Figure 4.1: Architecture Overview  [VISION-EXTRACTED DIAGRAM]",
 "",
 "**System boundary:** production VPC, single region",
 "**Inside the boundary:** application tier, data tier, bastion host",
@@ -27,6 +27,6 @@ const CLEAN = [
 "**Interface identifiers:** IF-047 (partner SFTP), IF-051 (directory sync)",
 "",
 "> Source: page 72. Backup-zone encryption method absent from the figure",
-"> and from the surrounding narrative — recorded as an evidence gap, not",
+"> and from the surrounding narrative, recorded as an evidence gap, not",
 "> as an absence claim."
 ];

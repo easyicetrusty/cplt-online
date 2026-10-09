@@ -1,4 +1,4 @@
-# CPLT Online — a private AI demonstration
+# CPLT Online: a private AI demonstration
 
 cplt.online contains illustrative, fictional document examples and a simulated
 interface. It explains model routing, document extraction, source checks and

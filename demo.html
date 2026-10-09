@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>See a Document Pipeline Fail Silently — CPLT Online</title>
+<title>See a Document Pipeline Fail Silently: CPLT Online</title>
 <meta name="description" content="Run two OCR pipelines on the same diagram page: the standard one passes garbage with a green check, the routed one catches it. Real failure, fictional document.">
 <link rel="canonical" href="https://cplt.online/demo">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
@@ -13,7 +13,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CPLT Online">
 <meta property="og:locale" content="en_US">
-<meta property="og:title" content="See a Document Pipeline Fail Silently — CPLT Online">
+<meta property="og:title" content="See a Document Pipeline Fail Silently: CPLT Online">
 <meta property="og:description" content="Run two OCR pipelines on the same diagram page: the standard one passes garbage with a green check, the routed one catches it. Real failure, fictional document.">
 <meta property="og:url" content="https://cplt.online/demo">
 <meta property="og:image" content="https://cplt.online/og-image.png">
@@ -22,7 +22,7 @@
 <meta property="og:image:alt" content="Interactive demo: a standard document pipeline versus a routed one">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="/style.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://cplt.tech/#organization", "name": "CPLT", "url": "https://cplt.tech", "logo": {"@type": "ImageObject", "url": "https://cplt.tech/android-chrome-512x512.png", "width": 512, "height": 512}, "sameAs": ["https://cplt.online"], "founder": {"@id": "https://cplt.tech/#person"}}, {"@type": "WebSite", "@id": "https://cplt.online/#website", "name": "CPLT Online", "alternateName": "cplt.online", "url": "https://cplt.online/", "description": "This demonstration uses fictional documents and an illustrative interface. I build AI assistants and automation through CPLT. Services and contact are on cplt.tech.", "inLanguage": "en", "publisher": {"@id": "https://cplt.tech/#organization"}, "isPartOf": {"@id": "https://cplt.tech/#website"}}, {"@type": "WebPage", "@id": "https://cplt.online/demo#webpage", "url": "https://cplt.online/demo", "name": "See a Document Pipeline Fail Silently — CPLT Online", "description": "Run two OCR pipelines on the same diagram page: the standard one passes garbage with a green check, the routed one catches it. Real failure, fictional document.", "inLanguage": "en", "isPartOf": {"@id": "https://cplt.online/#website"}, "about": {"@id": "https://cplt.tech/#service"}, "primaryImageOfPage": {"@type": "ImageObject", "url": "https://cplt.online/og-image.png", "width": 1200, "height": 630}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "CPLT Online", "item": "https://cplt.online/"}, {"@type": "ListItem", "position": 2, "name": "See it fail", "item": "https://cplt.online/demo"}]}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://cplt.tech/#organization", "name": "CPLT", "url": "https://cplt.tech", "logo": {"@type": "ImageObject", "url": "https://cplt.tech/android-chrome-512x512.png", "width": 512, "height": 512}, "sameAs": ["https://cplt.online"], "founder": {"@id": "https://cplt.tech/#person"}}, {"@type": "WebSite", "@id": "https://cplt.online/#website", "name": "CPLT Online", "alternateName": "cplt.online", "url": "https://cplt.online/", "description": "This demonstration uses fictional documents and an illustrative interface. I build AI assistants and automation through CPLT. Services and contact are on cplt.tech.", "inLanguage": "en", "publisher": {"@id": "https://cplt.tech/#organization"}, "isPartOf": {"@id": "https://cplt.tech/#website"}}, {"@type": "WebPage", "@id": "https://cplt.online/demo#webpage", "url": "https://cplt.online/demo", "name": "See a Document Pipeline Fail Silently: CPLT Online", "description": "Run two OCR pipelines on the same diagram page: the standard one passes garbage with a green check, the routed one catches it. Real failure, fictional document.", "inLanguage": "en", "isPartOf": {"@id": "https://cplt.online/#website"}, "about": {"@id": "https://cplt.tech/#service"}, "primaryImageOfPage": {"@type": "ImageObject", "url": "https://cplt.online/og-image.png", "width": 1200, "height": 630}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "CPLT Online", "item": "https://cplt.online/"}, {"@type": "ListItem", "position": 2, "name": "See it fail", "item": "https://cplt.online/demo"}]}]}</script>
 </head><body>
 <header class="nav">
   <div class="nav-in">
@@ -41,7 +41,7 @@
 <section class="pagelead"><div class="wrap stack g16 prose">
   <h1>The failure you would never have found</h1>
   <p>One page from a supplier document. One architecture diagram. Watch what a
-  standard pipeline does with it — and note that nothing anywhere reports a problem.</p>
+  standard pipeline does with it, and note that nothing anywhere reports a problem.</p>
   <p style="font-size:15px;color:var(--faint);border-left:2px solid var(--line);padding-left:14px">
   This is not a hypothetical built to make a point. It is a real failure mode from a
   production document pipeline, found after it had already been shipping damaged evidence
@@ -67,7 +67,7 @@
     <path d="M540,93 L508,93" marker-end="url(#a)"/>
   </g>
   <g fill="currentColor" font-family="monospace" font-size="10.5" opacity=".95">
-    <text x="16" y="20" opacity=".6">Figure 4.1 — Architecture Overview   ·   RESTRICTED</text>
+    <text x="16" y="20" opacity=".6">Figure 4.1: Architecture Overview   ·   RESTRICTED</text>
     <text x="60" y="97">bastion</text><text x="52" y="110" opacity=".6">MFA · TLS1.2</text>
     <text x="238" y="97">app tier</text><text x="230" y="110" opacity=".6">IF-047</text>
     <text x="406" y="97">data tier</text><text x="400" y="110" opacity=".6">mTLS :5432</text>
@@ -97,7 +97,7 @@
 
   <div class="punch">
     <strong>Look at what the left-hand validator actually measured.</strong> It counted
-    characters. The mangled diagram produced plenty of them — more than the text layer —
+    characters. The mangled diagram produced plenty of them (more than the text layer),
     so recall looked healthy and the page passed. The glyphs in red are what a character
     counter cannot see.
   </div>
@@ -107,7 +107,7 @@
     controls covering network segregation, encryption in transit, and privileged access.
     An assessment built on the left-hand output reports them as satisfied, because the
     words it needed were technically present somewhere in the noise. Nobody is lying.
-    Nobody is careless. The report is confident, complete, well formatted — and wrong in
+    Nobody is careless. The report is confident, complete, well formatted, and wrong in
     a way that surfaces the day an auditor opens page 72 for themselves.
   </div>
 
@@ -116,7 +116,7 @@
       The fix is not a better threshold. It is refusing to let a page reach an engine that
       cannot read it: detect the embedded raster up front, route it to a vision model, and
       validate by looking for garble rather than by counting. Even then the right-hand pane
-      does not claim the backup encryption is missing — the diagram simply does not state it,
+      does not claim the backup encryption is missing: the diagram simply does not state it,
       so that becomes a gap for a human rather than a finding.
     </p>
     <p class="note">

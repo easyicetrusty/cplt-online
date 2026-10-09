@@ -34,7 +34,7 @@
     const chars = GARBLE.join('').replace(/\s/g,'').length;
     meter.innerHTML='text-OCR returned <b>'+chars+'</b> characters · text layer had <b>'+Math.round(chars*0.71)+'</b> · recall ratio <b>'+(chars/(chars*0.71)).toFixed(2)+'</b>';
     await wait(500);
-    verdict(LV,'v-pass','✓','VALIDATION PASSED — recall ratio above threshold. Shipped as evidence.');
+    verdict(LV,'v-pass','✓','VALIDATION PASSED: recall ratio above threshold. Shipped as evidence.');
 
     // right: page classified first, routed to vision, checked for garble
     await wait(400);
@@ -45,7 +45,7 @@
       .replace(/(\[VISION-EXTRACTED DIAGRAM\])/,'<span class="q">$1</span>')
       .replace(/(NOT STATED)/,'<span class="q">$1</span>'));
     await wait(300);
-    verdict(RV,'v-hold','▲','GARBLE CHECK CLEAN — transcription accepted. One evidence gap recorded for a human.');
+    verdict(RV,'v-hold','▲','GARBLE CHECK CLEAN: transcription accepted. One evidence gap recorded for a human.');
     btn.textContent='Run again'; btn.disabled=false; ran=false;
   }
   btn.addEventListener('click', run);
