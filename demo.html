@@ -21,13 +21,21 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Interactive demo: a standard document pipeline versus a routed one">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/style.css?v=20261016-brand">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://cplt.tech/#organization", "name": "CPLT", "url": "https://cplt.tech", "logo": {"@type": "ImageObject", "url": "https://cplt.tech/android-chrome-512x512.png", "width": 512, "height": 512}, "sameAs": ["https://cplt.online"], "founder": {"@id": "https://cplt.tech/#person"}}, {"@type": "WebSite", "@id": "https://cplt.online/#website", "name": "CPLT Online", "alternateName": "cplt.online", "url": "https://cplt.online/", "description": "This demonstration uses fictional documents and an illustrative interface. I build AI assistants and automation through CPLT. Services and contact are on cplt.tech.", "inLanguage": "en", "publisher": {"@id": "https://cplt.tech/#organization"}, "isPartOf": {"@id": "https://cplt.tech/#website"}}, {"@type": "WebPage", "@id": "https://cplt.online/demo#webpage", "url": "https://cplt.online/demo", "name": "See a Document Pipeline Fail Silently: CPLT Online", "description": "Run two OCR pipelines on the same diagram page: the standard one passes garbage with a green check, the routed one catches it. Real failure, fictional document.", "inLanguage": "en", "isPartOf": {"@id": "https://cplt.online/#website"}, "about": {"@id": "https://cplt.tech/#service"}, "primaryImageOfPage": {"@type": "ImageObject", "url": "https://cplt.online/og-image.png", "width": 1200, "height": 630}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "CPLT Online", "item": "https://cplt.online/"}, {"@type": "ListItem", "position": 2, "name": "See it fail", "item": "https://cplt.online/demo"}]}]}</script>
 </head><body>
 <header class="nav">
   <div class="nav-in">
     <a class="brand" href="/" style="text-decoration:none">CPLT<span>.</span>online <span style="font-family:'JBMono',monospace;font-size:10px;letter-spacing:.14em;color:var(--faint);text-transform:uppercase;padding-left:6px">demo</span></a>
-    <nav class="nav-links">
+    <nav class="corporate-nav" aria-label="CPLT practice" data-brand-nav>
+      <a href="https://cplt.tech/services">Services</a><a href="https://cplt.tech/proof">Evidence and limits</a><a href="https://cplt.tech/about">About</a>
+    </nav>
+    <a class="btn btn-gold header-call" href="https://cplt.tech/contact" data-brand-nav>Request a free call <span aria-hidden="true">↗</span></a>
+    <details class="brand-menu" data-brand-nav><summary>Menu</summary><nav aria-label="Mobile navigation">
+      <a href="https://cplt.tech/">cplt.tech ↗</a><a href="https://cplt.tech/services">Services</a><a href="https://cplt.tech/proof">Evidence and limits</a><a href="https://cplt.tech/about">About</a>
+      <a href="/">Overview</a><a href="/demo">See it fail</a><a href="/how-it-works">How it works</a><a href="/deployment">Architecture</a><a href="/security">Security</a>
+    </nav></details>
+    <nav class="nav-links" aria-label="Demo navigation">
       <a href="/">Overview</a>
       <a href="/demo" class="active">See it fail</a>
       <a href="/how-it-works">How it works</a>
@@ -130,7 +138,8 @@
 
 <section style="border-top:0;padding-top:0"><div class="wrap"><div class="endcta"><p>This is a demonstration of the platform. I build AI assistants and automation through CPLT. Services and contact are on <strong>cplt.tech</strong>. Start with a free 45-minute remote scoping call. You receive a one-page written note on fit and next steps.</p><div><a class="btn btn-gold" href="https://cplt.tech/contact">Book a scoping call ↗</a> <a class="btn" href="https://cplt.tech/services">Back to cplt.tech ↗</a></div></div></div></section>
 </main>
-<footer><div class="wrap foot-in"><div><strong>Demo.</strong> cplt.online exists to show the platform working. <a href="https://cplt.tech" style="color:var(--gold-ink);text-decoration:none;border-bottom:1px solid var(--gold-line)">cplt.tech</a> has my services and contact details.</div><div class="mono" style="font-size:12.5px">Illustrative demo · fictional content</div></div></footer>
+<footer><div class="wrap foot-in"><div><strong>Demo.</strong> cplt.online exists to show the platform working. <a href="https://cplt.tech" style="color:var(--gold-ink);text-decoration:none;border-bottom:1px solid var(--gold-line)">cplt.tech</a> has my services and contact details.</div><div class="mono" style="font-size:12.5px">Illustrative demo · fictional content</div></div><nav class="wrap footer-nav" aria-label="CPLT footer" data-brand-nav><a href="https://cplt.tech/">CPLT ↗</a><a href="https://cplt.tech/services">Services</a><a href="https://cplt.tech/proof">Evidence and limits</a><a href="https://cplt.tech/about">About</a><a href="https://cplt.tech/contact">Request a free call ↗</a><a href="https://cplt.tech/privacy">Privacy</a><a href="https://cplt.tech/legal">Legal notice</a></nav></footer>
+<script src="/brand-motion.js" defer></script>
 <script src="/demo-data.js"></script>
 <script src="/demo-app.js"></script>
 </body></html>
